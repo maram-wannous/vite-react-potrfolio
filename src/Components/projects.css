@@ -23,7 +23,7 @@
 }
 .projects-info,
 .projects-img {
-    width: 400px;
+    width: 350px;
 	overflow: hidden;
 }
 .projects-info {
@@ -43,6 +43,6 @@
 @media(max-width: 767px) {
     .projects-info,
     .projects-img {
-        width: 350px;
+        width: 300px;
     }
 }
