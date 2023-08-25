@@ -1,0 +1,36 @@
+header {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    height: 70px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+header .logo span{
+    display: block;
+    font-size: 25px;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    line-height: 20px;
+}
+header .logo span.first-span {
+    color: #ff56f6;
+}
+header .logo span.second-span {
+    color: #b936ee;
+}
+@media (max-width: 767px) {
+    header .container {
+        width: 100%;
+    }
+  }

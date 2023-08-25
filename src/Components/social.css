@@ -1,0 +1,39 @@
+.socials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.social,
+.email-wrapper {
+	display: flex;
+	padding-bottom: 20px;
+}
+
+.social a,
+.email-wrapper a {
+	text-decoration: none;
+}
+
+.social-icon {
+	font-size: 15px;
+	color: #406aff;
+}
+
+.social-text {
+	color: var(--link-color);
+	padding-left: 30px;
+	margin-top: -20px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.email::before {
+	content: "";
+	display: block;
+	padding-top: 20px;
+	border-top: 3px solid #f4f4f5;
+	margin-top: 20px;
+}
+
+.email-wrapper {
+	padding-top: 20px;
+}
