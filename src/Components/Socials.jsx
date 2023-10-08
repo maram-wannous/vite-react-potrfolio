@@ -8,18 +8,12 @@ import {
 	faLinkedin,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
+
 
 export default function Socials(){
     return (
-        <motion.div variants={fadeIn('up', 0.3)} 
-                    initial='hidden'
-                    whileInView={'show'}
-                    viewport={{once: false, amount: 0.7}}
-                    className="container socials"
-        >
-			<div className="social">
+        <div className="container socials">
+			<div className="social" data-aos="fade-up">
 				<a href={INFO.socials.facebook} target="_blank" rel="noreferrer">
 					<div className="social-icon">
 						<FontAwesomeIcon
@@ -31,7 +25,7 @@ export default function Socials(){
 				</a>
 			</div>
 
-			<div className="social">
+			<div className="social" data-aos="fade-up">
 				<a href={INFO.socials.github} target="_blank" rel="noreferrer">
 					<div className="social-icon">
 						<FontAwesomeIcon
@@ -43,7 +37,7 @@ export default function Socials(){
 				</a>
 			</div>
 
-			<div className="social">
+			<div className="social" data-aos="fade-up">
 				<a
 					href={INFO.socials.linkedin}
 					target="_blank"
@@ -59,7 +53,7 @@ export default function Socials(){
 				</a>
 			</div>
 
-			<div className="social">
+			<div className="social" data-aos="fade-up">
 				<a
 					href={INFO.socials.instagram}
 					target="_blank"
@@ -75,7 +69,7 @@ export default function Socials(){
 				</a>
 			</div>
 
-			<div className="email">
+			<div className="email" data-aos="fade-up">
 				<div className="email-wrapper">
 					<a
 						href={`mailto:${INFO.main.email}`}
@@ -90,6 +84,6 @@ export default function Socials(){
 					</a>
 				</div>
 			</div>
-		</motion.div>
+		</div>
     );
 }

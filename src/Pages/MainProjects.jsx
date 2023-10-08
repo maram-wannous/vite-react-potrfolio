@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import Nav from "../Components/Nav";
 import TopNav from "../Components/TopNav";
 import Projects from "../Components/Projects";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
 
 export default function MainProjects () {
     const [active] = useState('projects');
@@ -15,29 +13,20 @@ export default function MainProjects () {
     return (
         <div>
             <Nav active={active} />
+            <TopNav/>
             <div className="main-projects">
-                <TopNav/>
-                <div className="mian-projects-text">
-                    <div className="container content">
-                        <motion.h1 variants={fadeIn('up', 0.3)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                        >
+                <div className="container">
+                    <div className="content">
+                        <h1>
                             {title}
-                        </motion.h1>
-                        <motion.p variants={fadeIn('up', 0.4)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                        >
+                        </h1>
+                        <p>
                             {description}
-                        </motion.p>
+                        </p>
                     </div>
                 </div>
             </div>
-            <Projects />
-            
+            <Projects />   
         </div>
     );
 }

@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import Nav from "../Components/Nav";
 import TopNav from "../Components/TopNav";
 import Socials from '../Components/Socials'
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
 import INFO from '../data/user'
 import './style.css'
 
@@ -19,23 +17,15 @@ export default function Contact () {
     return (
         <div>
             <Nav active={active} />
+			<TopNav/>
             <div className="main-projects">
-                <TopNav/>
-                <div className="mian-projects-text">
-                    <div className="container content">
-                        <motion.h1 variants={fadeIn('up', 0.3)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                        >
-                            {title}
-                        </motion.h1>
-                        <motion.p variants={fadeIn('up', 0.4)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                        >
-                            Thank you for your interest in getting in touch with
+				<div className="container">
+                    <div className="content">
+						<h1>
+							{title}
+						</h1>
+						<p>
+							Thank you for your interest in getting in touch with
 							me. I welcome your feedback, questions, and
 							suggestions. If you have a specific question or
 							comment, please feel free to email me directly at
@@ -57,9 +47,9 @@ export default function Contact () {
 							>
 								{INFO.socials[2].url}
 							</a>
-                        </motion.p>
-                    </div>
-                </div>
+						</p>
+					</div>
+				</div>
             </div>
             <Socials/>
         </div>

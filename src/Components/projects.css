@@ -1,16 +1,15 @@
 .projects-section {
 	padding-top: var(--section-padding);
 	padding-bottom: var(--section-padding);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
 }
 .all-projects-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex: 1;
-    gap: 30px;
+    overflow: hidden;
 }
 .all-projects-container .left-projects,
 .all-projects-container .right-projects {
@@ -19,12 +18,19 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 30px;
     
 }
 .projects-info,
 .projects-img {
-    width: 350px;
+    width: 400px;
 	overflow: hidden;
+}
+@media(max-width: 576px) {
+    .projects-info,
+    .projects-img {
+        width: 320px;
+    }
 }
 .projects-info {
     height: 300px;
@@ -40,9 +46,4 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-@media(max-width: 767px) {
-    .projects-info,
-    .projects-img {
-        width: 300px;
-    }
-}
+

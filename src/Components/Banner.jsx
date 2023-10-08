@@ -2,9 +2,7 @@
 /* eslint-disable react/prop-types */
 import './banner.css'
 import {TypeAnimation} from 'react-type-animation'
-import {motion} from 'framer-motion'
 import homeimg from '../assets/homeimg.jpg'
-import { fadeIn } from '../variants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import INFO from '../data/user'
 
@@ -16,13 +14,9 @@ export default function Banner({title, titleAnimation, desc, id}){
                 <div className="container">
                     <div className="banner-content">
                         <div className="banner-text">
-                            <motion.div  variants={fadeIn('up', 0.3)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                                    className='banner-text-title'>
+                            <div className='banner-text-title' data-aos="fade-up">
                                 <h1>
-                                        {title} 
+                                    {title} 
                                 </h1>
                                 <TypeAnimation sequence={[
                                     titleAnimation[0], 2000,
@@ -35,20 +29,11 @@ export default function Banner({title, titleAnimation, desc, id}){
                                     style={{color: '#b936ee'}}
                                     className= {id==='home' ? 'title-animation' : 'hide-type-animation'}
                                 />
-                            </motion.div>
-                            <motion.p variants={fadeIn('up', 0.4)} 
-                                    initial='hidden'
-                                    whileInView={'show'}
-                                    viewport={{once: false, amount: 0.7}}
-                            >
+                            </div>
+                            <p data-aos="fade-up" data-aos-delay="200">
                                 {desc}
-                            </motion.p>
-                            <motion.div variants={fadeIn('up', 0.5)} 
-                                        initial='hidden'
-                                        whileInView={'show'}
-                                        viewport={{once: false, amount: 0.7}}
-                                        className= {id==='home' ? '' : 'hide-homepage-socials'}
-                            >
+                            </p>
+                            <div className= {id==='home' ? '' : 'hide-homepage-socials'} data-aos="fade-up" data-aos-delay="300">
 							        {INFO.socials.map((social, index)=>(
                                         <a key={index} href={social.url}>
                                             <FontAwesomeIcon
@@ -57,14 +42,11 @@ export default function Banner({title, titleAnimation, desc, id}){
                                             />
                                         </a>
 							        ))}
-			                </motion.div>
+			                </div>
                         </div>
-                        <motion.div variants={fadeIn('down', 0.5)} 
-                            initial='hidden'
-                            whileInView={'show'}
-                            className="banner-img">
+                        <div className="banner-img" data-aos="zoom-in">
                             <img src={imag} alt="" />
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>

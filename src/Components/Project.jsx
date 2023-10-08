@@ -11,7 +11,7 @@ export default function Project (props) {
         <div className="project">
 				<div className="overlay"></div>
 				<img src={projectImage} alt={title} />
-				<Link to={link}>
+				<Link to={link} target="blank">
 					<div className="project-container">
 						<div className="project-title">
 							<span>{title}</span>
