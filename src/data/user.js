@@ -68,9 +68,9 @@ const INFO = {
 		{
 			title: "Project 3",
 			description:
-				"Responsive Landing page built with react.js ",
+				"Education Platform built with React & Redux  ",
 			linkText: "View Project",
-			link: "https://maram-wannous.github.io/maram_wannous_task1/",
+			link: "https://maram-wannous.github.io/education-platform/",
 			projectimage: projectimg3,
 		},
 
